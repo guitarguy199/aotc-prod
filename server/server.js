@@ -6,6 +6,8 @@ const app = express();
 app.use(express.static('public'));
 const DOMAIN = 'http://localhost:3000';
 
+
+
 app.post('/create-checkout-session', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     line_items: [
