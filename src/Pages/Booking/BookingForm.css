@@ -1,0 +1,87 @@
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 50rem;
+}
+
+.booking-form h1 {
+    font-family: 'Noto Sans', sans-serif;
+    font-style: italic;
+    font-size: 30px;
+}
+
+.booking-form .picker {
+    margin-bottom: 3rem;
+}
+
+/* .booking-form .picker label {
+    margin-top: 0.5rem;
+} */
+
+#root > div.layout > main > section > section > form > div.MuiFormControl-root.MuiTextField-root.picker.inputfield.css-z3c6am-MuiFormControl-root-MuiTextField-root > div {
+    border-color: #3E484A;
+    border: 1px solid;
+}
+
+
+#\:r1\:-label {
+    margin-top: 1rem;
+}
+
+#\:r1\: {
+    margin-top: 1rem;
+}
+
+.service-select {
+    width: 25rem;
+    height: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.select {
+    margin-bottom: 0.5rem;
+}
+
+.service-select:focus {
+    background-color: white;
+}
+
+.tay-booking-form input {
+    margin-bottom: 1rem;
+}
+
+
+.button-primary .submit {
+    width: 12rem;
+}
+
+.success {
+    margin-top: 2rem;
+    text-align: center;
+}
+.success svg {
+    color: green;
+}
+
+.go-home .button-text {
+    width: 20rem;
+}
+
+.go-home {
+    background-color: #F6F4EF;
+    margin-top: 2rem;
+}
+
+.go-home:hover {
+    background: #E9DED8;
+}
+
+.go-home:focus {
+    background-color: #F6F4EF;
+}
+
+#root > div.layout > main > section > section > form > div.MuiFormControl-root.MuiTextField-root.picker.inputfield.css-z3c6am-MuiFormControl-root-MuiTextField-root > div {
+    z-index: 0;
+}

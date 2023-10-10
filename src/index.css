@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@font-face {
+  font-family: 'TAN Aegean';
+  src: local('TanAegeanRegular'),
+    url('./fonts/TanAegeanRegular.ttf') format('truetype');
+}
+
+:root {
+  font-family: 'Noto Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #F7F5EE;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.button-primary {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: #E9DED7;
+}
+
+.button-text {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  display: block;
+  border-radius: 16px;
+}
+
+.button-primary:hover {
+  background-color: #ECE7E1;
+}
+
+.button-primary:focus, .button-primary:active, .button-primary:visited {
+  background-color: #E9DED7;
+  box-shadow: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #3E484A;
+}

@@ -1,0 +1,9 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10rem;
+    color: #242424;
+    opacity: 40%;
+    margin-top: 5rem;
+}

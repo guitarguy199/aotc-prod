@@ -1,0 +1,30 @@
+ .mc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*
+.mc-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mc-container .inputfield-label .inputfield-field {
+   display: flex;
+   flex-direction: column;
+} */
+
+/* .mc-container {
+    grid-column: 2;
+    margin-top: 20rem;
+    display: flex; 
+    max-width: 60rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    background: #E9DED8;
+    border-radius: 2rem;
+} */

@@ -1,0 +1,8 @@
+.home {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    padding-right: 40px;
+    padding-left: 40px;
+}

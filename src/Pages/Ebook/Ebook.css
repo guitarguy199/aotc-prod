@@ -1,0 +1,92 @@
+.ebook {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.ebook img {
+    background-color: aqua;
+    width: 100%;
+}
+
+.ebook h2 {
+    font-family: 'TAN Aegean';
+}
+
+.prices {
+    font-family: 'Noto Sans', sans-serif;
+    color: #927a62;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+}
+
+.prices h3:nth-child(1) {
+        color: black;
+        text-decoration: line-through;
+        font-weight: 400;
+}
+
+.prices h3:nth-child(2) {
+    font-style: bold;
+}
+
+.ebook-desc ol {
+    list-style-type: decimal;
+}
+
+.ebook-desc li {
+    padding: 0.5rem;
+}
+
+.stripe-chk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stripe-chk h1 {font-family: 'TAN Aegean';
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    width: 100%;
+}
+
+#yt-intro {
+    font-size: 20px;
+    padding-top: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+#yt-player {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+.ebook-desc li::marker {
+    color: black;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+}

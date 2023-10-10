@@ -1,0 +1,110 @@
+.services {
+    /* padding-top: 5rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.services .home-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* padding: 1rem; */
+    text-align: left;
+}
+
+.home-card img {
+    max-width: 200px;
+    max-height: 200px;
+    padding: 2rem;
+}
+
+.card-text {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text h3 {
+    font-family: "TAN Aegean"
+}
+
+.card-text h4 {
+    font-weight: 500;
+    padding-top: 0.4rem;
+    padding-bottom: 0.25rem;
+}
+
+.card-text .hc-btn {
+    width: 100%;
+}
+
+/* ----- Card Animations ---- */
+
+.card-1 {
+    animation: fadeIn ease 1.5s;
+    opacity: 0;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.card-2 {
+    animation: fadeIn ease 1.5s;
+    animation-delay: 0.5s;
+    opacity: 0;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.card-3 {
+    animation: fadeIn ease 1.5s;
+    opacity: 0;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* --- Media Queries --- */ 
+
+@media (max-width: 600px) {
+    .card {
+        max-width: 80%;
+    }
+    .home-card {
+        padding: 0;
+        margin: 0;
+    }
+
+    .card-text {
+    }
+    .card-text h3 {
+        font-size: 16px;
+    }
+    .card-text h4 {
+        font-size: 13px;
+    }
+
+    .home-card img {
+        max-width: 100%;
+        padding-left: 2rem;
+    }
+
+    .home-card .hc-btn {
+        /* max-width: 175px; */
+        /* position: absolute; */
+    }
+}

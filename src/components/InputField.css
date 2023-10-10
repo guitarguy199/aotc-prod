@@ -1,0 +1,38 @@
+.inputfield {
+    display: flex;
+    flex-direction: column;
+    /* width: 80%; */
+    height: 3rem;
+    margin-bottom: 2rem;
+}
+.inputfield-field {
+    min-height: 2rem;
+    border-radius: 4px;
+    max-width: 100%;
+    border: 2px solid rgb(118, 118, 118);
+    background-color: #F6F4EF;
+} 
+
+.inputfield-label {
+    margin-bottom: 0.5rem;
+}
+
+.textarea {
+    height: 20rem !important;
+}
+
+#root > div.layout > main > section > section > form > button {
+    width: 100%;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    display: block;
+    border-radius: 16px;
+}
+
+@media (max-width: 600px) {
+    /* .inputfield-field {
+        min-width: 20%;
+        max-width: 80%;
+    } */
+}

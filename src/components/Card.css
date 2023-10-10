@@ -1,0 +1,11 @@
+.card {
+    /* min-width: 10rem; */
+    max-width: 650px;
+    min-height: 260px;
+    margin-top: 48px;
+    /* margin-bottom: 68px; */
+    background-color: #E9DED7;
+    border-radius: 2rem;
+    text-align: center;
+    /* margin-left: 5rem; */
+}

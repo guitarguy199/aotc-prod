@@ -1,0 +1,95 @@
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    padding: 2rem;
+    max-width: 32rem;
+    background-color: #E9DED7;
+    border-radius: 1rem;
+    animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.subscribe-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe-inputs .inputfield {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 80%;
+}
+
+
+.mc-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mc-form .subscribe-inputs {
+    width: 100%;
+}
+
+#root > div.layout > main > section > div > section > form > div > input:disabled {
+    background-color: #F6F4EF;
+}
+
+.mc-form h3 {
+    text-align: center;
+}
+
+.mc-error {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mc-success {
+    margin-bottom: 2rem;
+    color: #3E484A;
+    font-weight: bold;
+}
+
+.mc-btn {
+    width: 90%;
+}
+#root > div.layout > main > section > section > form > div > input {
+    width: 80%;
+    margin-top: 2rem;
+    height: 2.5rem;
+}
+
+.mc-modal {
+    /* To control the success button after subscriber input */
+}
+
+
+/* ----- Media Queries ------- */
+
+@media (max-width: 850px) {
+    .subscribe {
+        margin-top: 2rem;
+    }
+    }
+
+
+@media (max-width: 600px) {
+
+    .subscribe {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
