@@ -4,9 +4,22 @@ const mailchimpTx = require("@mailchimp/mailchimp_transactional")(process.env.RE
 const express = require('express');
 const app = express();
 app.use(express.static('public'));
+const path = require("path");
+const cors = require("cors");
+const mongoSanitize = require("express-mongo-sanitize");
 const DOMAIN = 'http://localhost:3000';
 
+app.use(cors())
 
+app.use(express.static(path.join(__dirname, 'client', 'build')))
+
+app.use(mongoSanitize())
+
+app.get('/api/', (req, res) => {
+  return res.status(200).json({
+      status: "success"
+  })
+})
 
 app.post('/create-checkout-session', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
