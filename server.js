@@ -1,4 +1,4 @@
-require('dotenv').config();
+// require('dotenv').config();
 const stripe = require('stripe')(process.env.REACT_APP_STRIPE_KEY_PRIVATE);
 const mailchimpTx = require("@mailchimp/mailchimp_transactional")(process.env.REACT_APP_MC_TRANSACTIONAL_TEST)
 const express = require('express');
