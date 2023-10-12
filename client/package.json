@@ -58,5 +58,6 @@
           "last 1 safari version"
         ]
       },
+      "homepage": "http://localhost:3000",
       "proxy": "http://localhost:4242"
 }
