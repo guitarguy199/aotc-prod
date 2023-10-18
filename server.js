@@ -7,7 +7,7 @@ app.use(express.static('public'));
 const path = require("path");
 const cors = require("cors");
 const mongoSanitize = require("express-mongo-sanitize");
-const DOMAIN = 'http://localhost:3000';
+const DOMAIN = 'http://localhost:4242';
 
 app.use(cors())
 
