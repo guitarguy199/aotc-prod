@@ -23,7 +23,7 @@ httpsServer.listen('8443', () => {
 
 
 const mongoSanitize = require("express-mongo-sanitize");
-const DOMAIN = 'http://localhost:4242';
+const DOMAIN = 'https://aheadofthecurvemedia.com';
 
 app.use(cors())
 
