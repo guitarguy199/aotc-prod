@@ -32,6 +32,7 @@ const Header = () => {
         <div className='header-text'>
             <h3>Ahead of the Curve</h3>
             <h4>Create - Collaborate - Be Kind</h4>
+            <h4>TEST</h4>
         </div>
             </div>
 
