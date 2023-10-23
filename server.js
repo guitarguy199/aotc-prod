@@ -8,9 +8,9 @@ const path = require("path");
 const cors = require("cors");
 const https = require('https');
 const fs = require('fs');
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/aheadofthecurvemedia.com/privkey.pem', 'utf8'); // key
-const certificate = fs.readFileSync('/etc/letsencrypt/live/aheadofthecurvemedia.com/cert.pem', 'utf8'); // certificate
-const ca = fs.readFileSync('/etc/letsencrypt/live/aheadofthecurvemedia.com/chain.pem', 'utf8'); // chain
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/aheadofthecurvemedia.com-0001/privkey.pem', 'utf8'); // key
+const certificate = fs.readFileSync('/etc/letsencrypt/live/aheadofthecurvemedia.com-0001/cert.pem', 'utf8'); // certificate
+const ca = fs.readFileSync('/etc/letsencrypt/live/aheadofthecurvemedia.com-0001/chain.pem', 'utf8'); // chain
 const credentials = {
    key: privateKey,
    cert: certificate,
