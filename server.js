@@ -6,6 +6,22 @@ const app = express();
 app.use(express.static('public'));
 const path = require("path");
 const cors = require("cors");
+const https = require('https');
+const fs = require('fs');
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/aheadofthecurvemedia.com/privkey.pem', 'utf8'); // key
+const certificate = fs.readFileSync('/etc/letsencrypt/live/aheadofthecurvemedia.com/cert.pem', 'utf8'); // certificate
+const ca = fs.readFileSync('/etc/letsencrypt/live/aheadofthecurvemedia.com/chain.pem', 'utf8'); // chain
+const credentials = {
+   key: privateKey,
+   cert: certificate,
+   ca: ca
+};
+const httpsServer = https.createServer(credentials, app);
+httpsServer.listen('8443', () => {
+  console.log('listening on https://aheadofthecurvemedia.com/8443');
+});
+
+
 const mongoSanitize = require("express-mongo-sanitize");
 const DOMAIN = 'http://localhost:4242';
 
