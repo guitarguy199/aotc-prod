@@ -6,7 +6,7 @@ import './Stripe.css';
 
 const ProductCard = () => (
     <section className="product">
-    <img src={workbook} />
+    <img src={workbook} alt="AI Workbook" />
         <div className="price">
             <h3>$199</h3>
             <h3>$99</h3>
