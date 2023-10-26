@@ -7,7 +7,7 @@ const express = require('express');
 const app = express();
 app.use(express.static('public'));
 const path = require("path");
-const cors = require("cors");
+// const cors = require("cors");
 const https = require('https');
 const fs = require('fs');
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/aheadofthecurvemedia.com-0001/privkey.pem', 'utf8'); // key
@@ -20,14 +20,14 @@ const credentials = {
 };
 const httpsServer = https.createServer(credentials, app);
 httpsServer.listen('8443', () => {
-  console.log('listening on https://aheadofthecurvemedia.com/8443');
+  console.log('listening on https://aheadofthecurvemedia.com:8443');
 });
 
 
 const mongoSanitize = require("express-mongo-sanitize");
 const DOMAIN = 'https://aheadofthecurvemedia.com';
 
-app.use(cors())
+// app.use(cors())
 
 app.use(express.static(path.join(__dirname, 'client', 'build')))
 
