@@ -1,3 +1,4 @@
+import Checkout from '../../components/ST';
 import Stripe from '../../components/Stripe';
 import './Ebook.css';
 import aiTraining from './assets/ai-training.jpeg';
@@ -43,6 +44,7 @@ const Ebook = () => {
                 </div>
             <div className='stripe-chk'>
                 <h1>Grab Your Copy Today!</h1>
+                <Checkout />
                 <Stripe />
             </div>
         </section>
