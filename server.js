@@ -1,5 +1,5 @@
 require('dotenv').config();
-const stripe = require('stripe')(process.env.REACT_APP_STRIPE_KEY_PRIVATE_PROD);
+const stripe = require('stripe')(process.env.REACT_APP_STRIPE_KEY_PRIVATE);
 const mailchimpTx = require("@mailchimp/mailchimp_transactional")(process.env.REACT_APP_MC_TRANSACTIONAL_TEST)
 const express = require('express');
 const app = express();
@@ -46,7 +46,8 @@ app.post('/create-checkout-session', async (req, res) => {
     line_items: [
       {
         // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-        price: "price_1O5BBRCAeBcNtSOYgmWz24fw",
+        // price: "price_1O5BBRCAeBcNtSOYgmWz24fw",
+        price: "price_1NxvDxCAeBcNtSOYz1m8b82n",
         quantity: 1,
       },
     ],
@@ -60,7 +61,7 @@ app.post('/create-checkout-session', async (req, res) => {
 });
 
 const bodyParser = require('body-parser');
-const endpointSecret = process.env.REACT_APP_STRIPE_WEBHOOK_SECRET_PROD;
+const endpointSecret = process.env.REACT_APP_STRIPE_WEBHOOK_SECRET;
 
 const fulfillOrder = (lineItems) => {
   console.log("Fulfilling Order", lineItems)
