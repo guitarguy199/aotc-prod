@@ -192,3 +192,5 @@ app.post('/webhook', bodyParser.raw({type: 'application/json'}), async (request,
 // });
 
 app.listen(4242, () => console.log('Running on port 4242'));
+console.log(process.env.REACT_APP_STRIPE_KEY_PRIVATE);
+console.log(process.env.REACT_APP_STRIPE_WEBHOOK_SECRET_PROD);
