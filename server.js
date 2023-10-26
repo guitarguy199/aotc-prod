@@ -88,73 +88,73 @@ const getEmail = (emailaddr) => {
   console.log("Email: ", emailaddr);
 }
 
-app.post('/webhook', bodyParser.raw({type: 'application/json'}), async (request, response) => {
-  const payload = request.body;
-  const sig = request.headers['stripe-signature'];
+// app.post('/webhook', bodyParser.raw({type: 'application/json'}), async (request, response) => {
+//   const payload = request.body;
+//   const sig = request.headers['stripe-signature'];
 
-  let event;
+//   let event;
 
-  try {
-    event = stripe.webhooks.constructEvent(payload, sig, endpointSecret)
-  } catch (err) {
-      return response.status(400).send(`Webhook error: ${err.message}`);
-  }
+//   try {
+//     event = stripe.webhooks.constructEvent(payload, sig, endpointSecret)
+//   } catch (err) {
+//       return response.status(400).send(`Webhook error: ${err.message}`);
+//   }
 
-  if (event.type === 'checkout.session.completed') {
-    const sessionWithLineItems = await stripe.checkout.sessions.retrieve(
-      event.data.object.id,
-      // event.data.object.customer,
-      {
-        expand: ['line_items'],
-      }
+//   if (event.type === 'checkout.session.completed') {
+//     const sessionWithLineItems = await stripe.checkout.sessions.retrieve(
+//       event.data.object.id,
+//       // event.data.object.customer,
+//       {
+//         expand: ['line_items'],
+//       }
 
-    );
-    const lineItems = sessionWithLineItems.line_items;
-    const emailId = sessionWithLineItems.customer_details.email;
+//     );
+//     const lineItems = sessionWithLineItems.line_items;
+//     const emailId = sessionWithLineItems.customer_details.email;
 
-  //   const message = {
-  //   from_email: "info@aheadofthecurvemedia.com",
-  //   subject: "Hello world",
-  //   text: "Welcome to Mailchimp Transactional!",
-  //   to: [
-  //     {
-  //       email: emailId,
-  //       type: "to"
-  //     }
-  //   ]
-  // }
+//   //   const message = {
+//   //   from_email: "info@aheadofthecurvemedia.com",
+//   //   subject: "Hello world",
+//   //   text: "Welcome to Mailchimp Transactional!",
+//   //   to: [
+//   //     {
+//   //       email: emailId,
+//   //       type: "to"
+//   //     }
+//   //   ]
+//   // }
 
-  const run = async () => {
+//   const run = async () => {
 
-    const response = await mailchimpTx.messages.sendTemplate({
-      template_name: 'testing',
-      template_content: [
-        {
-          name: "testing",
-          content: "testing",
-        }
-      ],
-      message: {
-        subject: "Testing Mailchimp Transactional",
-        from_email: "info@aheadofthecurvemedia.com",
-        to: [
-          {
-            email: emailId,
-            type: "to"
-          }
-        ]
-      }
-    });
-    console.log(response);
-  }
+//     const response = await mailchimpTx.messages.sendTemplate({
+//       template_name: 'testing',
+//       template_content: [
+//         {
+//           name: "testing",
+//           content: "testing",
+//         }
+//       ],
+//       message: {
+//         subject: "Testing Mailchimp Transactional",
+//         from_email: "info@aheadofthecurvemedia.com",
+//         to: [
+//           {
+//             email: emailId,
+//             type: "to"
+//           }
+//         ]
+//       }
+//     });
+//     console.log(response);
+//   }
 
-    fulfillOrder(lineItems);
-    getEmail(emailId);
-    run();
-  }
+//     fulfillOrder(lineItems);
+//     getEmail(emailId);
+//     run();
+//   }
 
-  response.status(200);
-});
+//   response.status(200);
+// });
 
 // app.get('/create-checkout-session', async (req, res) => {
 //   let customer = {
